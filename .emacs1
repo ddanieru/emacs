@@ -1,0 +1,45 @@
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(LaTeX-math-abbrev-prefix "ç"))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
+
+(setq-default ispell-program-name "aspell")
+(setq-default ispell-extra-args '("--mode=tex"))
+
+;; mouse scrolling
+(mouse-wheel-mode t)
+ 
+;; spellcheck in LaTex mode
+(add-hook `latex-mode-hook `flyspell-mode)
+(add-hook `tex-mode-hook `flyspell-mode)
+(add-hook `bibtex-mode-hook `flyspell-mode)
+ 
+;; Show line-number and column-number in the mode line
+(line-number-mode 1)
+(column-number-mode 1)
+
+;; highlight current line
+(global-hl-line-mode 1)
+;; To customize the background color
+(set-face-background 'hl-line "#111")  ;; Emacs 22 Only
+
+
+;; ========= Set colours ==========
+
+;; Set cursor and mouse-pointer colours
+(set-cursor-color "red")
+(set-mouse-color "goldenrod")
+
+;; Set region background colour
+(set-face-background 'region "blue")
+
+;; Set emacs background colour
+(set-background-color "black")
